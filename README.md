@@ -1,6 +1,16 @@
 # color-claim-sass
+![Version: v0.5.0](https://img.shields.io/badge/release-v0.5.0-blue.svg)
+
 color-claim-sass is a color library and a set of functions, classes and mixins.
 They are based on Tobias van Schneider's ColorClaim. See all the color swatches over at http://www.vanschneider.com/colors/
+
+## Installation
+### NPM
+`npm install --save color-claim-sass` installs color-claim-sass. You can copy the scss or css files to your assets. 
+Alternatively, use `@import "path/to/node_modules/color-claim-sass/scss/colorclaim";` in your SASS project.
+
+### .zip file
+You can always download the latest version through [this link](https://github.com/JeroenPtrs/color-claim-sass/archive/master.zip) or via the "Download ZIP" button on [GitHub](https://github.com/JeroenPtrs/color-claim-sass);
 
 ## Usage
 ### Function
