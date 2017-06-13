@@ -1,0 +1,59 @@
+@function colorclaim($color, $claim: "bg") {
+    //  Check if color exists.
+    @if map-has-key($colorclaim, $color) {
+        $color: map-get($colorclaim, $color);     
+
+        // Return bg value (1st item in list).
+        @if ($claim == "bg") {
+            @return nth($color, 1);
+        }
+
+        //  Return text value (2nd item in list).
+        @else if ($claim == "text") {
+            @return nth($color, 2);
+        }
+    }
+
+    @warn "This color or selector does not exist";
+    @return null;
+}
+
+@mixin colorclaim($color, $claim: null){
+    // Set bg if "text" isn't passed
+    @if ($claim != "text") {
+        color: colorclaim($color, "bg") !important;
+    }
+
+    // Set text if "bg" isn't passed
+    @if ($claim != "bg") {
+        color: colorclaim($color, "text") !important;
+    }
+}
+
+/*
+**  You can use the following classes if you really need to use it as a class (f.e. in HTML, jQuery, ...).
+**  In any other cases - like the ones addressed above - just use the mixin or the function. 
+**  With #color a number from 1-50:
+**      use .colorclaim-#color to set both the background-color and color attributes,
+**      .color-claim-bg-#color to only set the background-color attribute,
+**      .color-claim-text-#color to only set the color attribute.
+*/
+@each $color in $colorclaim {
+    //  Get the key.
+    $color: nth($color, 1);
+    
+    //  Set both bg and text colors.
+    .colorclaim-#{$color}{
+        @include colorclaim($color);
+    }
+
+    //  Only set bg color.
+    .colorclaim-bg-#{$color}{
+        @include colorclaim($color, "bg");
+    }
+
+    //  Only set text color.
+    .colorclaim-text-#{$color}{
+        @include colorclaim($color, "text");
+    }
+}

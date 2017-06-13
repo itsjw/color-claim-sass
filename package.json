@@ -1,0 +1,32 @@
+{
+  "name": "color-claim-sass",
+  "version": "0.5.0",
+  "description": "SASS color library, based on Tobias van Schneider's Color Claim. http://www.vanschneider.com/colors/",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch",
+    "build": "node-sass --include-path scss scss/colorclaim.scss css/colorclaim.css && node-sass --output-style compressed --include-path scss scss/colorclaim.scss css/colorclaim.min.css",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeroenPtrs/color-claim-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "color",
+    "claim",
+    "library",
+    "design"
+  ],
+  "author": "Jeroen Peeters <contact@jeroenpeeters.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeroenPtrs/color-claim-sass/issues"
+  },
+  "homepage": "https://github.com/JeroenPtrs/color-claim-sass#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  }
+}
