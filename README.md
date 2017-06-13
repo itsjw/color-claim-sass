@@ -1,6 +1,6 @@
 ![Color Claim](http://www.vanschneider.com/wp-content/uploads/2016/02/cc_title_vector.svg)  
 
-![version: v0.5.0-docs](https://img.shields.io/badge/release-v0.5.0--docs-blue.svg)
+![version: v0.5.1](https://img.shields.io/badge/release-v0.5.1-blue.svg)
 
 color-claim-sass is a color library, with a set of accompanying functions, classes and mixins.
 They are based on Tobias van Schneider's Color Claim. See all the color swatches over at http://www.vanschneider.com/colors/
