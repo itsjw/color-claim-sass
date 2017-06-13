@@ -1,10 +1,10 @@
 {
   "name": "color-claim-sass",
   "version": "0.5.0-docs",
-  "description": "color-claim-sass is a color library and a set of functions, classes and mixins. They are based on Tobias van Schneider's ColorClaim. See all the color swatches over at http://www.vanschneider.com/colors/",
+  "description": "color-claim-sass is a color library, with a set of accompanying functions, classes and mixins. They are based on Tobias van Schneider's Color Claim. See all the color swatches over at http://www.vanschneider.com/colors/",
   "scripts": {
     "start": "npm run watch",
-    "build": "node-sass --include-path scss scss/colorclaim.scss css/colorclaim.css && node-sass --output-style compressed --include-path scss scss/colorclaim.scss css/colorclaim.min.css",
+    "build": "node-sass --include-path scss scss/color-claim.scss css/color-claim.css && node-sass --output-style compressed --include-path scss scss/color-claim.scss css/color-claim.min.css",
     "watch": "nodemon -e scss -x \"npm run build\""
   },
   "repository": {
