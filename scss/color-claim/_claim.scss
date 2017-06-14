@@ -1,4 +1,4 @@
-@function color-claim($color, $claim: "bg") {
+@function color-claim($color, $claim: "bg", $percentage: 50%) {
     //  Check if color exists.
     @if map-has-key($color-claim, $color) {
         $color: map-get($color-claim, $color);     
@@ -12,6 +12,11 @@
         @else if ($claim == "text") {
             @return nth($color, 2);
         }
+
+        @else if ($claim == "mix"){
+            @return mix(nth($color, 1), nth($color, 2), $percentage);
+        }
+
     }
 
     @warn "This color or selector does not exist";
@@ -71,7 +76,7 @@ $_type: if($_silent, unquote("%"), unquote("."));
         @include color-claim($color, "text");
     }
 
-    //  Only set text color.
+    //  Set inverse color.
     #{$_type}color-claim-inv-#{$color}{
         @include color-claim($color, "inv");
     }
