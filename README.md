@@ -13,7 +13,7 @@ Alternatively, use `@import "path/to/node_modules/color-claim-sass/color-claim";
 ### CDN
 Download the latest version through via [RawGit](https://cdn.rawgit.com/jeroenptrs/color-claim-sass/archive/v1.1.0.zip).
 
-Import all CSS classes in your website using `<link rel="stylesheet" href="https://cdn.rawgit.com/jeroenptrs/color-claim-sass/1df5c103/css/color-claim.min.css">`
+Import all CSS classes in your website using `<link rel="stylesheet" href="https://cdn.rawgit.com/jeroenptrs/color-claim-sass/1d7af7f2/css/color-claim.min.css">`
 
 ## Usage
 ### Function
