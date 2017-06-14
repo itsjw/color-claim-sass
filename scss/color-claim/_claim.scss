@@ -37,36 +37,42 @@
     }
 }
 
-/*
-**  You can use the following classes if you really need to use it as a class (f.e. in HTML, jQuery, ...).
-**  In any other cases - like the ones addressed above - just use the mixin or the function. 
-**  With #color a number from 1-50:
-**      use .color-claim-#color to set both the background-color and color attributes,
-**      .color-claim-bg-#color to only set the background-color attribute,
-**      .color-claim-text-#color to only set the color attribute.
-**      .color-claim-inv-#color to set the background-color attribute to the color value (and vice versa).
-*/
+$_type: if($_silent, unquote("%"), unquote("."));
+@if($_type == true){
+    /*
+    **  You can use the following classes if you really need to use it as a class (f.e. in HTML, jQuery, ...).
+    **  In any other cases - like the ones addressed above - just use the mixin or the function. 
+    **  With #color a number from 1-50:
+    **      use .color-claim-#color to set both the background-color and color attributes,
+    **      .color-claim-bg-#color to only set the background-color attribute,
+    **      .color-claim-text-#color to only set the color attribute.
+    **      .color-claim-inv-#color to set the background-color attribute to the color value (and vice versa).
+    **
+    **  You can also set these classes as silent, so they won't compile to your css.
+    **  Before importing color-claim-sass in your project, set $_silent to true.
+    */
+}
 @each $color in $color-claim {
     //  Get the key.
     $color: nth($color, 1);
     
     //  Set both bg and text colors.
-    .color-claim-#{$color}{
+    #{$_type}color-claim-#{$color}{
         @include color-claim($color);
     }
 
     //  Only set bg color.
-    .color-claim-bg-#{$color}{
+    #{$_type}color-claim-bg-#{$color}{
         @include color-claim($color, "bg");
     }
 
     //  Only set text color.
-    .color-claim-text-#{$color}{
+    #{$_type}color-claim-text-#{$color}{
         @include color-claim($color, "text");
     }
 
     //  Only set text color.
-    .color-claim-inv-#{$color}{
+    #{$_type}color-claim-inv-#{$color}{
         @include color-claim($color, "inv");
     }
 }

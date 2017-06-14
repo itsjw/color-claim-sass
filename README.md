@@ -36,12 +36,28 @@ Not passing a value for `$claim` automatically sets both, passing "bg" or "text"
 Passing "inv" as a value sets the inverse: `background-color` to the corresponding "text" color and `color` to the "bg" color.
 
 ### Classes
+```sass
+.color-claim-#{$color}
+.color-claim-bg-#{$color}
+.color-claim-text-#{$color}
+.color-claim-inv-#{$color}
+```
 You can use the following classes if you really need to use it as a class (f.e. in HTML, jQuery, ...). In any other cases - like the ones addressed above - just use the mixin or the function. 
 
-Again, `#color` can be a number from 1-102.
-Use `.color-claim-#color` to set both the `background-color` and `color` attributes.
+`$color` can be any Color Claim swatch (1-102). 
+Use `.color-claim-#{$color}` to set both the `background-color` and `color` attributes.
 
-`.color-claim-bg-#color` only sets `background-color` attribute, `.color-claim-text-#color` only sets `color`.
+`.color-claim-bg-#{$color}` only sets `background-color` attribute,
+`.color-claim-text-#{$color}` only sets `color`.
 
 Inverse is also available: 
-`.color-claim-inv-#color` sets background-color attribute to the color value (and vice versa). 
+`.color-claim-inv-#{$color}` sets background-color attribute to the color value (and vice versa). 
+
+### Silent Classes
+```sass
+$_silent: true;
+```
+You can also set all classes as silent, so they won't compile to your css.
+Before importing color-claim-sass in your project, create a variable `$_silent` and set it to `true`.
+
+All classes will still be available in Sass, just use `@extend %color-claim[-bg/-text/-inv]-#{$color}`.
