@@ -19,14 +19,21 @@
 }
 
 @mixin color-claim($color, $claim: null){
-    // Set bg if "text" isn't passed
-    @if ($claim != "text") {
+    //  Check for inverse first
+    @if ($claim == "inv"){
+        background-color: color-claim($color, "text") !important;
         color: color-claim($color, "bg") !important;
     }
+    @else {
+        //  Set bg if "text" isn't passed
+        @if ($claim != "text") {
+            background-color: color-claim($color, "bg") !important;
+        }
 
-    // Set text if "bg" isn't passed
-    @if ($claim != "bg") {
-        color: color-claim($color, "text") !important;
+        //  Set text if "bg" isn't passed
+        @if ($claim != "bg") {
+            color: color-claim($color, "text") !important;
+        }
     }
 }
 
@@ -37,6 +44,7 @@
 **      use .color-claim-#color to set both the background-color and color attributes,
 **      .color-claim-bg-#color to only set the background-color attribute,
 **      .color-claim-text-#color to only set the color attribute.
+**      .color-claim-inv-#color to set the background-color attribute to the color value (and vice versa).
 */
 @each $color in $color-claim {
     //  Get the key.
@@ -55,5 +63,10 @@
     //  Only set text color.
     .color-claim-text-#{$color}{
         @include color-claim($color, "text");
+    }
+
+    //  Only set text color.
+    .color-claim-inv-#{$color}{
+        @include color-claim($color, "inv");
     }
 }

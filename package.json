@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeroenPtrs/color-claim-sass.git"
+    "url": "git+https://github.com/jeroenptrs/color-claim-sass.git"
   },
   "keywords": [
     "sass",
@@ -21,9 +21,9 @@
   "author": "Jeroen Peeters <contact@jeroenpeeters.me>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JeroenPtrs/color-claim-sass/issues"
+    "url": "https://github.com/jeroenptrs/color-claim-sass/issues"
   },
-  "homepage": "https://github.com/JeroenPtrs/color-claim-sass#readme",
+  "homepage": "https://github.com/jeroenptrs/color-claim-sass#readme",
   "devDependencies": {
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0"
