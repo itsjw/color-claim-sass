@@ -2,7 +2,7 @@
 
 ![version: v1.0.0](https://img.shields.io/badge/release-v1.0.0-blue.svg)
 
-color-claim-sass is a color library, with a set of accompanying functions, classes and mixins.
+color-claim-sass is a Sass color library, with a set of accompanying functions, classes and mixins.
 They are based on Tobias van Schneider's Color Claim. See all the color swatches over at http://www.vanschneider.com/colors/
 
 ## Installation
@@ -31,13 +31,17 @@ In case of setting `background-color` and/or `color` to their respective Color C
 This mixin sets your element's background and/or text colors to the corresponding Color Claim values.
 `$color` selects the corresponding Color Claim swatch.
 
-Not passing a value for `$claim` automatically sets both, passing "bg" or "text" as value respectfully only sets `background-color` and `color`. Passing "inv" as a value sets the inverses: `background-color` to the corresponding "text" color and `color` to the "bg" color.
+Not passing a value for `$claim` automatically sets both, passing "bg" or "text" as value respectfully only sets `background-color` and `color`.
+
+Passing "inv" as a value sets the inverse: `background-color` to the corresponding "text" color and `color` to the "bg" color.
 
 ### Classes
 You can use the following classes if you really need to use it as a class (f.e. in HTML, jQuery, ...). In any other cases - like the ones addressed above - just use the mixin or the function. 
 
-Again, `#color` can be a number from 1-102.<br>
-Use `.color-claim-#color` to set both the `background-color` and `color` attributes,<br>
-`.color-claim-bg-#color` to only set the `background-color` attribute,<br>
-`.color-claim-text-#color` to only set the `color` attribute<br>
-and `.color-claim-inv-#color` to set the background-color attribute to the color value (and vice versa). 
+Again, `#color` can be a number from 1-102.
+Use `.color-claim-#color` to set both the `background-color` and `color` attributes.
+
+`.color-claim-bg-#color` only sets `background-color` attribute, `.color-claim-text-#color` only sets `color`.
+
+Inverse is also available: 
+`.color-claim-inv-#color` sets background-color attribute to the color value (and vice versa). 
