@@ -1,6 +1,6 @@
 {
   "name": "color-claim-sass",
-  "version": "1.0.0-test",
+  "version": "1.0.0",
   "description": "color-claim-sass is Sass a color library, with a set of accompanying functions, classes and mixins. They are based on Tobias van Schneider's Color Claim. See all the color swatches over at http://www.vanschneider.com/colors/",
   "scripts": {
     "start": "npm run watch",
