@@ -1,7 +1,9 @@
 script:
 - "test/travis.rb"
 
-language: sass
+language: ruby
+rvm:
+- 2.4.1
 before_install:
 - gem install sass
 - chmod +x test/travis.rb
