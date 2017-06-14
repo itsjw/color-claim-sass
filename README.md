@@ -1,6 +1,6 @@
 ![Color Claim](http://www.vanschneider.com/wp-content/uploads/2016/02/cc_title_vector.svg)  
 
-![version: v1.0.1](https://img.shields.io/badge/release-v1.0.1-blue.svg) ![Build status](https://api.travis-ci.org/jeroenptrs/color-claim-sass.svg?branch=master)
+![Latest version](https://img.shields.io/npm/v/color-claim-sass.svg) [![Build Status](https://travis-ci.org/jeroenptrs/color-claim-sass.svg?branch=master)](https://travis-ci.org/jeroenptrs/color-claim-sass) [![Dependency Status](https://www.versioneye.com/user/projects/59411a306725bd0030ec5006/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59411a306725bd0030ec5006)
 
 color-claim-sass is a Sass color library, with a set of accompanying functions, classes and mixins.
 They are based on Tobias van Schneider's Color Claim. See all the color swatches over at http://www.vanschneider.com/colors/
@@ -11,7 +11,7 @@ They are based on Tobias van Schneider's Color Claim. See all the color swatches
 Alternatively, use `@import "path/to/node_modules/color-claim-sass/color-claim";` in your Sass project.
 
 ### CDN
-Download the latest version through via [RawGit](https://github.com/jeroenptrs/color-claim-sass/releases/tag/v1.0.1).
+Download the latest version through via [RawGit](https://cdn.rawgit.com/jeroenptrs/color-claim-sass/archive/v1.0.1.zip).
 
 Import all CSS classes in your website using `<link rel="stylesheet" href="https://cdn.rawgit.com/jeroenptrs/color-claim-sass/1df5c103/css/color-claim.min.css">`
 
