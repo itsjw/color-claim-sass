@@ -7,11 +7,13 @@ They are based on Tobias van Schneider's Color Claim. See all the color swatches
 
 ## Installation
 ### NPM
-`npm install --save color-claim-sass` installs color-claim-sass. You can copy the scss or css files to your assets. 
+`npm install --save color-claim-sass` installs color-claim-sass. Copy the scss or css files to your assets. 
 Alternatively, use `@import "path/to/node_modules/color-claim-sass/color-claim";` in your Sass project.
 
-### .zip file
-You can always download the latest version through [this link](https://github.com/JeroenPtrs/color-claim-sass/archive/master.zip) or via the "Download ZIP" button on [GitHub](https://github.com/JeroenPtrs/color-claim-sass);
+### CDN
+Download the latest version through via [RawGit](https://github.com/jeroenptrs/color-claim-sass/releases/tag/v1.0.1).
+
+Import all CSS classes in your website using `<link rel="stylesheet" href="https://cdn.rawgit.com/jeroenptrs/color-claim-sass/1df5c103/css/color-claim.min.css">`
 
 ## Usage
 ### Function
