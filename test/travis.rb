@@ -5,9 +5,6 @@ raise "When compiled the module should output some CSS" unless File.exists?('bui
 puts "Regular compile worked successfully"
 
 result = `sass test/silent.scss build.silent.css -t compressed --sourcemap=none`
-output = File.read('build.silent.css')
 raise result unless $?.to_i == 0
-puts output
-puts File.size?('build.silent.css')
-puts File.zero?('build.silent.css')
-puts File.empty?('build.silent.css')
+raise "When $use-silent-classes is set to true the module should not output any CSS" unless File.size('build.silent.css') == 0
+puts "Silent sass compiled successfully"
