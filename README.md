@@ -67,3 +67,7 @@ You can also set all classes as silent, so they won't compile to your css.
 Before importing color-claim-sass in your project, create a variable `$_silent` and set it to `true`.
 
 All classes will still be available in Sass, just use `@extend %color-claim[-bg/-text/-inv]-#{$color}`.
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/SXH7ZmV8YYXzxLZF9dCVxN6W/jeroenptrs/color-claim-sass'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/SXH7ZmV8YYXzxLZF9dCVxN6W/jeroenptrs/color-claim-sass.svg' />
+</a>
